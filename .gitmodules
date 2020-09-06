@@ -1,0 +1,57 @@
+[submodule "graphics"]
+	path = graphics
+	url = https://github.com/icerockdev/moko-graphics.git
+[submodule "parcelize"]
+	path = parcelize
+	url = https://github.com/icerockdev/moko-parcelize.git
+[submodule "resources"]
+	path = resources
+	url = https://github.com/icerockdev/moko-resources.git
+[submodule "mvvm"]
+	path = mvvm
+	url = https://github.com/icerockdev/moko-mvvm.git
+[submodule "fields"]
+	path = fields
+	url = https://github.com/icerockdev/moko-fields.git
+[submodule "media"]
+	path = media
+	url = https://github.com/icerockdev/moko-media.git
+[submodule "units"]
+	path = units
+	url = https://github.com/icerockdev/moko-units.git
+[submodule "maps"]
+	path = maps
+	url = https://github.com/icerockdev/moko-maps.git
+[submodule "permissions"]
+	path = permissions
+	url = https://github.com/icerockdev/moko-permissions.git
+[submodule "widgets"]
+	path = widgets
+	url = https://github.com/icerockdev/moko-widgets.git
+[submodule "network"]
+	path = network
+	url = https://github.com/icerockdev/moko-network.git
+[submodule "errors"]
+	path = errors
+	url = https://github.com/icerockdev/moko-errors.git
+[submodule "paging"]
+	path = paging
+	url = https://github.com/icerockdev/moko-paging.git
+[submodule "template"]
+	path = template
+	url = https://github.com/icerockdev/moko-template.git
+[submodule "tensorflow"]
+	path = tensorflow
+	url = https://github.com/icerockdev/moko-tensorflow.git
+[submodule "socket-io"]
+	path = socket-io
+	url = https://github.com/icerockdev/moko-socket-io.git
+[submodule "geo"]
+	path = geo
+	url = https://github.com/icerockdev/moko-geo.git
+[submodule "time"]
+	path = time
+	url = https://github.com/icerockdev/moko-time.git
+[submodule "widgets-template"]
+	path = widgets-template
+	url = https://github.com/icerockdev/moko-widgets-template.git
