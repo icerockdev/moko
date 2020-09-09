@@ -2,11 +2,7 @@ now gradle's dependencies substitution can't correct share output KMP artifacts 
  includeBuilds, so this repository now unusable. 
 
 # Dependencies graph
-![Alt text](https://g.gravizo.com/source/moko_dependencies?https://raw.githubusercontent.com/icerockdev/moko/master/README.md)
-
-<details> 
-<summary></summary>
-moko_dependencies
+![Alt text](https://g.gravizo.com/svg?
 digraph MOKO {
     graphics [label="moko-graphics"];
     parcelize [label="moko-parcelize"];
@@ -26,7 +22,7 @@ digraph MOKO {
     mapsMapbox [label="moko-maps-mapbox"];
     tensorflow [label="moko-tensorflow"];
     
-    ranksep=1
+    ranksep=1;
     
     {rank=same; graphics; parcelize; units; network; permissions}
     {rank=same; resources; media; geo}
@@ -62,5 +58,4 @@ digraph MOKO {
     
     tensorflow -> resources;
 }
-moko_dependencies
-</details>
+)
