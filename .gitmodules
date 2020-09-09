@@ -49,9 +49,6 @@
 [submodule "geo"]
 	path = geo
 	url = https://github.com/icerockdev/moko-geo.git
-[submodule "time"]
-	path = time
-	url = https://github.com/icerockdev/moko-time.git
 [submodule "widgets-template"]
 	path = widgets-template
 	url = https://github.com/icerockdev/moko-widgets-template.git
