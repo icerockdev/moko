@@ -6,7 +6,7 @@ now gradle's dependencies substitution can't correct share output KMP artifacts 
 <details> 
 <summary></summary>
 custom_mark10
- digraph MOKO {
+  digraph MOKO {
      graphics [label="moko-graphics"];
      parcelize [label="moko-parcelize"];
      resources [label="moko-resources"];
@@ -24,6 +24,7 @@ custom_mark10
      mapsGoogle [label="moko-maps-google"];
      mapsMapbox [label="moko-maps-mapbox"];
      tensorflow [label="moko-tensorflow"];
+     widgets [label="moko-widgets"];
      ranksep=1;
      {rank=same; graphics; parcelize; units; network; permissions}
      {rank=same; resources; media; geo}
@@ -48,6 +49,12 @@ custom_mark10
      mapsGoogle -> maps;
      mapsMapbox -> maps;
      tensorflow -> resources;
+     widgets -> resources;
+     widgets -> mvvm;
+     widgets -> fields;
+     widgets -> units;
+     widgets -> graphics;
+     widgets -> parcelize;
  }
 custom_mark10
 </details>
