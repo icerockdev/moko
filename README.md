@@ -23,11 +23,15 @@ custom_mark10
      maps [label="moko-maps"];
      mapsGoogle [label="moko-maps-google"];
      mapsMapbox [label="moko-maps-mapbox"];
+     socket [label="moko-socket-io"];
+     crashReporting [label="moko-crash-reporting"];
+     crashReportingCrashlytics [label="moko-crash-reporting-crashlytics"];
+     crashReportingNapier [label="moko-crash-reporting-napier"];
      tensorflow [label="moko-tensorflow"];
      widgets [label="moko-widgets"];
      ranksep=1;
-     {rank=same; graphics; parcelize; units; network; permissions}
-     {rank=same; resources; media; geo}
+     {rank=same; graphics; parcelize; units; network; permissions; crashReporting; socket}
+     {rank=same; resources; media; geo; crashReportingCrashlytics; crashReportingNapier}
      {rank=same; mvvm; tensorflow; unitsBasic; maps}
      {rank=same; errors; paging; fields; mapsMapbox; mapsGoogle}
      resources -> graphics;
@@ -55,6 +59,8 @@ custom_mark10
      widgets -> units;
      widgets -> graphics;
      widgets -> parcelize;
+     crashReportingCrashlytics -> crashReporting;
+     crashReportingNapier -> crashReporting;
  }
 custom_mark10
 </details>
