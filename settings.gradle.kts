@@ -1,5 +1,9 @@
 rootProject.name = "moko-libs"
 
+plugins {
+    id("com.gradle.enterprise").version("3.5")
+}
+
 fun org.gradle.api.initialization.ConfigurableIncludedBuild.substituteMpp(name: String = this.name) {
     dependencySubstitution {
         listOf(
@@ -28,3 +32,10 @@ includeBuild("permissions") { substituteMpp() }
 includeBuild("media") { substituteMpp() }
 includeBuild("fields") { substituteMpp() }
 includeBuild("template")
+
+gradleEnterprise {
+    buildScan {
+        termsOfServiceUrl = "https://gradle.com/terms-of-service"
+        termsOfServiceAgree = "yes"
+    }
+}
