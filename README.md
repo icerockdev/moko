@@ -10,7 +10,8 @@ custom_mark10
      graphics [label="moko-graphics"];
      parcelize [label="moko-parcelize"];
      resources [label="moko-resources"];
-     mvvm [label="moko-mvvm"];
+     mvvmCore [label="moko-mvvm-core"];
+     mvvmLiveData [label="moko-mvvm-livedata"];
      units [label="moko-units",rank=0];
      unitsBasic [label="moko-units-basic"];
      fields [label="moko-fields"];
@@ -20,6 +21,7 @@ custom_mark10
      errors [label="moko-errors"];
      paging [label="moko-paging"];
      network [label="moko-network"];
+     networkErrors [label="moko-network-errors"];
      maps [label="moko-maps"];
      mapsGoogle [label="moko-maps-google"];
      mapsMapbox [label="moko-maps-mapbox"];
@@ -29,24 +31,27 @@ custom_mark10
      crashReportingNapier [label="moko-crash-reporting-napier"];
      tensorflow [label="moko-tensorflow"];
      widgets [label="moko-widgets"];
+     biometry [label="moko-biometry"];
+     test [label="moko-test"]
      ranksep=1;
-     {rank=same; graphics; parcelize; units; network; permissions; crashReporting; socket}
+     {rank=same; graphics; parcelize; units; network; permissions; crashReporting; socket; mvvmCore; test}
      {rank=same; resources; media; geo; crashReportingCrashlytics; crashReportingNapier}
-     {rank=same; mvvm; tensorflow; unitsBasic; maps}
-     {rank=same; errors; paging; fields; mapsMapbox; mapsGoogle}
+     {rank=same; mvvmLiveData; tensorflow; unitsBasic; maps; errors; biometry}
+     {rank=same; networkErrors; paging; fields; mapsMapbox; mapsGoogle}
      resources -> graphics;
      resources -> parcelize;
-     mvvm -> resources;
+     mvvmLiveData -> mvvmCore;
+     mvvmLiveData -> resources;
      unitsBasic -> units;
      unitsBasic -> resources;
      unitsBasic -> graphics;
-     fields -> mvvm;
+     fields -> mvvmLiveData;
      fields -> resources;
      media -> permissions;
      geo -> permissions;
-     errors -> mvvm;
+     errors -> mvvmCore;
      errors -> resources;
-     paging -> mvvm;
+     paging -> mvvmLiveData;
      maps -> geo;
      maps -> resources;
      maps -> graphics;
@@ -54,13 +59,16 @@ custom_mark10
      mapsMapbox -> maps;
      tensorflow -> resources;
      widgets -> resources;
-     widgets -> mvvm;
+     widgets -> mvvmLiveData;
      widgets -> fields;
      widgets -> units;
      widgets -> graphics;
      widgets -> parcelize;
+     networkErrors -> network;
+     networkErrors -> errors;
      crashReportingCrashlytics -> crashReporting;
      crashReportingNapier -> crashReporting;
+     biometry -> resources;
  }
 custom_mark10
 </details>
