@@ -1,11 +1,11 @@
-[submodule "graphics"]
-	path = graphics
+[submodule "moko-graphics"]
+	path = moko-graphics
 	url = https://github.com/icerockdev/moko-graphics.git
-[submodule "parcelize"]
-	path = parcelize
+[submodule "moko-parcelize"]
+	path = moko-parcelize
 	url = https://github.com/icerockdev/moko-parcelize.git
-[submodule "resources"]
-	path = resources
+[submodule "moko-resources"]
+	path = moko-resources
 	url = https://github.com/icerockdev/moko-resources.git
 [submodule "mvvm"]
 	path = mvvm
